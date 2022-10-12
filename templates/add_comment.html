@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>Add comment</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <hr>
+        <button class="btn btn-primary">Add Comment</button>
+    </form>
+   
+{% endblock %}
