@@ -1,16 +1,18 @@
 {% extends 'index.html' %}
 {% load crispy_forms_tags %}
-
 {% block content %}
-    <h1>Login page</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form|crispy}}
-        <hr>
-        <button class="btn btn-primary">Log in</button>
-    </form>
-    <hr>
-    <small class="text-nuted">
-        Not registered yet?<a href="{% url 'register' %}"> Register</a>
-    </small>
+<h1>Login page</h1>
+
+<form method="POST">
+    {% csrf_token %} {{ form|crispy}}
+    <hr />
+    <button class="btn btn-primary">Log in</button>
+</form>
+<hr />
+<small class="text-nuted">
+    Not registered yet?<a href="{% url 'register' %}"> Register</a>
+</small>
 {% endblock %}
+
+
+
